@@ -1,0 +1,507 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ARelogger.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ARelogger.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 56
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "关于 ARelogger"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,12,20,20
+    LTEXT           "ARelogger",IDC_ABOUTVER,40,10,133,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2016, Abin",IDC_COPYRIGHT,40,25,176,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_ARELOGGER_DIALOG DIALOGEX 0, 0, 467, 375
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ARelogger"
+MENU IDR_MENU_MAIN
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_BOTLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,7,453,159
+    GROUPBOX        "批量操作",IDC_FRAME_OPER,7,175,193,40
+    PUSHBUTTON      "全部隐藏",IDC_HIDEALL,16,191,58,14
+    PUSHBUTTON      "全部显示",IDC_SHOWALL,74,191,58,14
+    PUSHBUTTON      "全部停止",IDC_STOPALL,132,191,58,14
+    GROUPBOX        "任务数据",IDC_FRAME_TASKS,210,175,250,40
+    PUSHBUTTON      "新建",IDC_NEW,219,191,58,14
+    PUSHBUTTON      "编辑",IDC_EDIT,277,191,58,14,WS_DISABLED
+    PUSHBUTTON      "复制",IDC_CLONE,335,191,58,14,WS_DISABLED
+    PUSHBUTTON      "删除",IDC_DELETE,393,191,58,14,WS_DISABLED
+    EDITTEXT        IDC_LOG,7,224,453,123,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+    LTEXT           "",IDC_LOGSIZE,10,357,167,8
+    PUSHBUTTON      "打开日志",IDC_OPENLOG,260,354,58,14
+    PUSHBUTTON      "清空日志",IDC_CLEARLOG,318,354,58,14
+    PUSHBUTTON      "退出",IDC_EXIT,393,354,58,14
+    PUSHBUTTON      "Debug",IDC_DEBUG,189,355,50,14,NOT WS_VISIBLE
+END
+
+IDD_BOTDLG DIALOGEX 0, 0, 297, 328
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "任务设置"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "任务",IDC_FRAME_TASK,7,7,283,40
+    LTEXT           "任务名称：",IDC_LBL_TASKNAME,15,26,56,8
+    EDITTEXT        IDC_NAME,86,23,109,14,ES_AUTOHSCROLL
+    GROUPBOX        "Diablo III",IDC_STATIC,7,58,283,140
+    LTEXT           "游戏目录：",IDC_LBL_DIABLOPATH,15,78,56,8
+    PUSHBUTTON      "Diablo Path",IDC_DIABLOPATH,86,75,193,14
+    LTEXT           "战网账号：",IDC_LBL_ACCPUNT,15,99,56,8
+    EDITTEXT        IDC_USERACCOUNT,86,96,109,14,ES_AUTOHSCROLL
+    LTEXT           "战网密码：",IDC_LBL_PASSWORD,15,119,56,8
+    EDITTEXT        IDC_USERPASSWORD,86,116,109,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "我使用战网安全令",IDC_USEBNETAUTH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,139,260,10
+    LTEXT           "序列号：",IDC_LBL_SERIAL,15,159,56,8
+    EDITTEXT        IDC_BNETSERIAL,86,156,109,14,ES_AUTOHSCROLL
+    LTEXT           "( EN-1234-5678-0000 )",IDC_STATIC,198,159,85,8
+    LTEXT           "还原密码：",IDC_LBL_RESTORECODE,15,179,56,8
+    EDITTEXT        IDC_BNETRESTORECODE,86,176,109,14,ES_AUTOHSCROLL
+    GROUPBOX        "DemonBuddy",IDC_STATIC,7,208,283,87
+    LTEXT           "程序目录：",IDC_LBL_DEMONBUDDYPATH,15,230,56,8
+    PUSHBUTTON      "DemonBuddy Path",IDC_DEMONBUDDYPATH,86,227,193,14
+    LTEXT           "授权码：",IDC_AUTHCODE,15,252,56,8
+    EDITTEXT        IDC_DEMONBUDDYKEY,86,249,109,14,ES_AUTOHSCROLL
+    LTEXT           "脚本文件：",IDC_LBL_PROFILEPATH,15,273,56,8
+    PUSHBUTTON      "Profile Path",IDC_PROFILEPATH,86,270,193,14
+    DEFPUSHBUTTON   "确定",IDOK,82,307,50,14
+    PUSHBUTTON      "取消",IDCANCEL,161,307,50,14
+END
+
+IDD_NEWPWDDLG DIALOGEX 0, 0, 198, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "创建密码"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "输入新密码：",IDC_NEW_PASSWORD,"Static",SS_SIMPLE | 
+                    WS_GROUP,7,10,70,8
+    EDITTEXT        IDC_PWD,78,7,113,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "重复新密码：",IDC_REPEAT_PASSWORD,"Static",SS_SIMPLE | 
+                    WS_GROUP,7,32,70,8
+    EDITTEXT        IDC_PWD2,78,29,113,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,41,54,50,14
+    PUSHBUTTON      "取消",IDCANCEL,105,54,50,14
+END
+
+IDD_PWDDLG DIALOGEX 0, 0, 187, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "请输入访问密码"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "访问密码：",IDC_LABEL,"Static",SS_SIMPLE | WS_GROUP,7,
+                    10,53,8
+    EDITTEXT        IDC_PWD,63,7,117,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,38,31,50,14
+    PUSHBUTTON      "取消",IDCANCEL,99,31,50,14
+END
+
+IDD_LOGINFAILDLG DIALOGEX 0, 0, 227, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "访问密码错误"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "你可以选择重试重新输入密码，或者清空所有数据并以新用户身份重新运行ARelogger。",
+                    IDC_TEXT,7,7,213,29
+    PUSHBUTTON      "重试",IDRETRY,33,44,50,14
+    PUSHBUTTON      "清空数据并退出",IDIGNORE,141,44,79,14
+    PUSHBUTTON      "退出",IDCANCEL,84,44,50,14
+END
+
+IDD_CONFIGDLG DIALOGEX 0, 0, 451, 246
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "设置选项"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "双击任务列表",IDC_FRAME_DBLCLK_LIST,7,7,214,105
+    CONTROL         "无操作",IDC_LISTOPER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,16,25,202,10
+    CONTROL         "打开任务数据编辑窗口",IDC_OPER_EDIT,"Button",
+                    BS_AUTORADIOBUTTON,16,42,202,10
+    CONTROL         "循环执行：启动 - 停止",IDC_OPER_STARTSTOP,"Button",
+                    BS_AUTORADIOBUTTON,16,59,202,10
+    CONTROL         "循环执行：启动 - 停止（保留进程）",IDC_OPER_STARTDETACH,
+                    "Button",BS_AUTORADIOBUTTON,16,75,202,10
+    CONTROL         "循环执行：启动 - 暂停 - 恢复",IDC_OPER_STARTPAUSE,
+                    "Button",BS_AUTORADIOBUTTON,16,92,202,10
+    GROUPBOX        "运行控制",IDC_FRAME_TASK_CONTROL,7,123,214,89
+    CONTROL         "阻止Diablo游戏窗口最小化",IDC_PREVENT_MIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,141,202,10
+    CONTROL         "优先监控TripWire事件",IDC_TRIPWIRE,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,16,159,202,10
+    CONTROL         "使用Demonbuddy二次启动模式以避免插件错误",
+                    IDC_DB_2X_LOGIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,
+                    175,202,10
+    CONTROL         "尝试接管运行中的的Diablo与Demonbuddy进程",IDC_REUSEWND,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,193,202,10
+    GROUPBOX        "等待时限",IDC_FRAME_TIMEOUT,230,7,214,205
+    LTEXT           "启动Diablo至账号密码登录界面：",IDC_LBL_SCREEN,244,28,
+                    121,8
+    EDITTEXT        IDC_TIME_LAUNCHGAME,370,25,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "秒",IDC_LBL_S1,414,28,27,8
+    LTEXT           "Battle.net登录验证耗时：",IDC_LBL_LOGIN,244,50,97,8
+    EDITTEXT        IDC_TIME_LOGIN,370,47,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "秒",IDC_LBL_S2,414,50,27,8
+    LTEXT           "登录成功后角色创建游戏耗时：",IDC_LBL_JOIN,244,70,113,8
+    EDITTEXT        IDC_TIME_JOIN,370,67,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "秒",IDC_LBL_S3,414,70,27,8
+    LTEXT           "角色离开游戏时间超过：",IDC_LBL_LEFT,244,92,89,8
+    EDITTEXT        IDC_TIME_LEAVE,370,89,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "秒",IDC_LBL_S4,414,92,27,8
+    LTEXT           "游戏与服务器连接断开且未恢复：",IDC_LBL_DISCONNECT,244,
+                    112,121,8
+    EDITTEXT        IDC_TIME_DISCONNECT,370,109,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "秒",IDC_LBL_S5,414,112,27,8
+    LTEXT           "Diablo游戏进程失去响应：",IDC_LBL_DIABLO_HUNG,244,134,
+                    97,8
+    EDITTEXT        IDC_TIME_GAME_HUNG,370,131,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "秒",IDC_LBL_S6,414,134,27,8
+    LTEXT           "Demonbuddy外挂进程失去响应：",IDC_LBL_DEMONBUDDY_HUNG,
+                    244,154,113,8
+    EDITTEXT        IDC_TIME_DB_HUNG,370,151,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "秒",IDC_LBL_S7,414,154,27,8
+    LTEXT           "*等待时限到达后将强制重启Diablo进程",
+                    IDC_LBL_FORCE_RESTART,244,177,200,8
+    PUSHBUTTON      "恢复默认值",IDC_DEFAULT,14,225,70,14
+    DEFPUSHBUTTON   "确定",IDOK,325,225,50,14
+    PUSHBUTTON      "取消",IDCANCEL,382,225,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,1
+ PRODUCTVERSION 1,0,1,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", " Abin Studio\0"
+            VALUE "FileDescription", "ARelogger - Diablo3 & Demonbuddy relogger\0"
+            VALUE "FileVersion", "1, 0, 1, 1\0"
+            VALUE "InternalName", "ARelogger\0"
+            VALUE "LegalCopyright", "Copyright (C) 2016, Abin Software\0"
+            VALUE "LegalTrademarks", "Abin\0"
+            VALUE "OriginalFilename", "ARelogger.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ARelogger\0"
+            VALUE "ProductVersion", "1, 0, 1, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 49
+    END
+
+    IDD_ARELOGGER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 460
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 368
+    END
+
+    IDD_BOTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 321
+    END
+
+    IDD_NEWPWDDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 191
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 68
+    END
+
+    IDD_PWDDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_LOGINFAILDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_CONFIGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 444
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "TRAY"
+    BEGIN
+        MENUITEM "任务列表",                    ID_POPUP_SHOWWND
+        MENUITEM "设置选项",                    ID_MENU_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "全部隐藏",                    ID_TRAY_HIDEALL
+        MENUITEM "全部显示",                    ID_TRAY_SHOWALL
+        MENUITEM "全部停止",                    ID_TRAY_STOPALL
+        MENUITEM SEPARATOR
+        MENUITEM "关于",                        ID_POPUP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                        ID_POPUP_EXIT
+    END
+END
+
+IDR_MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "文件"
+    BEGIN
+        MENUITEM "退出",                        ID_POPUP_EXIT
+    END
+    POPUP "任务"
+    BEGIN
+        MENUITEM "启动",                        ID_TASK_START
+        MENUITEM "停止",                        ID_TASK_STOP
+        MENUITEM "停止（保留进程）",            ID_TASK_DETACH
+        MENUITEM "暂停/恢复",                   ID_TASK_PAUSERESUME
+        MENUITEM SEPARATOR
+        MENUITEM "隐藏游戏",                    ID_TASK_HIDEGAMES
+        MENUITEM SEPARATOR
+        MENUITEM "新建",                        ID_TASK_NEW
+        MENUITEM "编辑",                        ID_TASK_EDIT
+        MENUITEM "复制",                        ID_TASK_CLONE
+        MENUITEM "删除",                        ID_TASK_DELETE
+    END
+    POPUP "设置"
+    BEGIN
+        MENUITEM "选项...",                     ID_MENU_SETTINGS
+        MENUITEM "更改密码",                    ID_MENU_SETTINGS_PASSWORD
+        MENUITEM SEPARATOR
+        POPUP "Languages"
+        BEGIN
+            MENUITEM "English",                     ID_MENU_LANG_ENG
+            MENUITEM "简体中文",                    ID_MENU_LANG_CHS
+            MENUITEM "繁體中文",                    ID_MENU_LANG_CHT
+        END
+    END
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于",                        ID_POPUP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BOT_IMG             BITMAP  DISCARDABLE     "res\\bot_img.bmp"
+IDR_TOOLBAR1            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_TASK_START
+    BUTTON      ID_TASK_STOP
+    BUTTON      ID_TASK_DETACH
+    BUTTON      ID_TASK_PAUSERESUME
+    SEPARATOR
+    BUTTON      ID_TASK_NEW
+    BUTTON      ID_TASK_EDIT
+    BUTTON      ID_TASK_DELETE
+    BUTTON      ID_TASK_CLONE
+    BUTTON      ID_POPUP_ABOUT
+    SEPARATOR
+    BUTTON      ID_TRAY_HIDEALL
+    BUTTON      ID_TRAY_STOPALL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      DISCARDABLE     "res\\Admin.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "About ARelogger(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\ARelogger.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
